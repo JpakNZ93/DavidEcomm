@@ -1,0 +1,80 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - "cursor/**"
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    env:
+      ANALYTICS_ENABLED: "false"
+      NEXT_PUBLIC_SITE_URL: "http://127.0.0.1:3000"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+
+  typecheck:
+    runs-on: ubuntu-latest
+    env:
+      ANALYTICS_ENABLED: "false"
+      NEXT_PUBLIC_SITE_URL: "http://127.0.0.1:3000"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+
+  test:
+    runs-on: ubuntu-latest
+    env:
+      ANALYTICS_ENABLED: "false"
+      NEXT_PUBLIC_SITE_URL: "http://127.0.0.1:3000"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test
+
+  build:
+    runs-on: ubuntu-latest
+    env:
+      ANALYTICS_ENABLED: "false"
+      NEXT_PUBLIC_SITE_URL: "http://127.0.0.1:3000"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+
+  e2e:
+    runs-on: ubuntu-latest
+    env:
+      ANALYTICS_ENABLED: "false"
+      NEXT_PUBLIC_SITE_URL: "http://127.0.0.1:3000"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
