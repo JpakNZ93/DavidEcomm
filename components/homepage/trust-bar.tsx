@@ -39,7 +39,7 @@ export function TrustBar() {
                 key={item.label}
                 className="flex items-center justify-center gap-3 rounded-md border border-saltwater bg-white px-5 py-4 text-center"
               >
-                <Icon className="size-5 text-inkjet" />
+                <Icon className="size-5 text-warm-stone-600" />
                 <span className="text-sm font-medium text-tangaroa">{item.label}</span>
               </div>
             );

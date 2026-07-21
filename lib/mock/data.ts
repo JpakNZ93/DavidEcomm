@@ -941,7 +941,7 @@ export const mockHomepageHeroes: HomepageHero[] = [
   },
   {
     id: "hero-2",
-    headline: "Architectural details with a inkjet-and-warm-stone point of view.",
+    headline: "Architectural details, built on quality and trust.",
     subheadline: "Discover statement handles, brass tapware and timeless utility pieces.",
     cta_text: "Explore best sellers",
     cta_href: "/collections/best-sellers",

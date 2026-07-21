@@ -31,13 +31,13 @@ export function CollectionCards({
                 sizes="(min-width: 1024px) 33vw, 100vw"
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/30" />
-              <div className="absolute inset-x-6 bottom-6 rounded-md bg-white p-6 shadow-lg">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gray-900">
+              <div className="absolute inset-0 bg-tangaroa/30" />
+              <div className="absolute inset-x-6 bottom-6 rounded-md border-t-2 border-warm-stone-600 bg-white p-6 shadow-lg">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tangaroa">
                   {collection.name}
                 </p>
-                <p className="mt-3 text-sm text-gray-600">{collection.description}</p>
-                <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-gray-900">
+                <p className="mt-3 text-sm text-slate-grey">{collection.description}</p>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-tangaroa transition-colors group-hover:text-warm-stone-600">
                   {collection.cta_text}
                   <ArrowRight className="size-4" />
                 </span>

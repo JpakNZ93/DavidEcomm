@@ -54,9 +54,9 @@ export async function CategoryIconGrid() {
               <Link
                 key={item.id}
                 href={`/categories/${item.slug}`}
-                className="group flex flex-col items-center gap-2 rounded-md border border-saltwater bg-white px-2 py-3 text-center transition-colors hover:border-inkjet"
+                className="group flex flex-col items-center gap-2 rounded-md border border-saltwater bg-white px-2 py-3 text-center transition-colors hover:border-warm-stone"
               >
-                <div className="flex size-11 items-center justify-center rounded-md border border-saltwater text-inkjet transition-colors group-hover:border-inkjet group-hover:text-tangaroa sm:size-12">
+                <div className="flex size-11 items-center justify-center rounded-md border border-saltwater text-inkjet transition-colors group-hover:border-warm-stone group-hover:text-warm-stone-600 sm:size-12">
                   <Icon className="size-5 sm:size-6" />
                 </div>
                 <span className="text-xs leading-tight font-medium text-tangaroa">{item.name}</span>
