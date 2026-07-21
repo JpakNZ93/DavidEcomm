@@ -10,7 +10,7 @@ export async function SiteFooter() {
   return (
     <footer className="mt-auto bg-navy-900 text-white">
       <div className="site-shell py-12">
-        <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
           <div className="space-y-4">
             <div>
               <p className="font-heading text-3xl">DavidEcomm</p>

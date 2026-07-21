@@ -54,8 +54,8 @@ export default async function HomePage() {
         source="homepage-new-arrivals"
       />
       <InspirationGrid images={inspirationImages.slice(0, 4)} title="Bathroom inspiration" />
-      <TrustBar />
       <NewsletterSignup />
+      <TrustBar />
     </>
   );
 }
