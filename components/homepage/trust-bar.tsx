@@ -3,7 +3,7 @@ import { Award, BadgeCheck, MessageSquareMore, Truck } from "lucide-react";
 const trustItems = [
   {
     icon: Truck,
-    label: "Free Shipping Australia Wide",
+    label: "Shipping Australia Wide",
   },
   {
     icon: Award,
