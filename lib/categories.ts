@@ -1,11 +1,11 @@
 import { unstable_cache } from "next/cache";
 
 import { mockCategories } from "@/lib/mock/data";
-import { createClient } from "@/lib/supabase/server";
+import { createPublicClient } from "@/lib/supabase/server";
 import type { Category } from "@/lib/supabase/types";
 
 async function fetchSupabaseCategories() {
-  const supabase = await createClient();
+  const supabase = createPublicClient();
 
   if (!supabase) {
     return null;

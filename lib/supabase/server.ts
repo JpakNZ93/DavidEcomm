@@ -1,3 +1,4 @@
+import { createClient as createSupabaseClient } from "@supabase/supabase-js";
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
@@ -16,6 +17,17 @@ function getSupabaseEnv() {
 
 export function hasSupabaseEnv() {
   return Boolean(getSupabaseEnv());
+}
+
+/** Read-only catalog client — safe inside unstable_cache (no cookies). */
+export function createPublicClient() {
+  const env = getSupabaseEnv();
+
+  if (!env) {
+    return null;
+  }
+
+  return createSupabaseClient<Database>(env.url, env.anonKey);
 }
 
 export async function createClient() {
