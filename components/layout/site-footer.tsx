@@ -85,14 +85,7 @@ export async function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
-          <div className="flex flex-wrap items-center gap-3">
-            {["Visa", "Mastercard", "PayPal", "Stripe"].map((method) => (
-              <span key={method} className="rounded-full border border-white/15 px-3 py-1">
-                {method}
-              </span>
-            ))}
-          </div>
+        <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/60 md:flex-row md:items-center md:justify-end">
           <div className="flex flex-wrap items-center gap-4">
             <span>{new Date().getFullYear()} DavidEcomm</span>
             <Link href="#" className="hover:text-white">
