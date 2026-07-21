@@ -2,7 +2,7 @@ import { unstable_cache } from "next/cache";
 
 import { getCachedCategories } from "@/lib/categories";
 import { mockProducts } from "@/lib/mock/data";
-import { createClient } from "@/lib/supabase/server";
+import { createClient, createPublicClient } from "@/lib/supabase/server";
 import type { Product, ProductBadge } from "@/lib/supabase/types";
 
 export interface ProductFilters {
@@ -69,7 +69,7 @@ async function getCategoryIdSet(slug?: string) {
 }
 
 async function fetchSupabaseProducts(filters: ProductFilters) {
-  const supabase = await createClient();
+  const supabase = createPublicClient();
 
   if (!supabase) {
     return null;
@@ -169,7 +169,7 @@ export async function getProducts(filters: ProductFilters = {}) {
 }
 
 export async function getProductBySlug(slug: string) {
-  const supabase = await createClient();
+  const supabase = createPublicClient();
 
   if (supabase) {
     const { data, error } = await supabase

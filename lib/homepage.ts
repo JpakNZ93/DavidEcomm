@@ -6,7 +6,7 @@ import {
   mockInspirationImages,
   mockSiteConfig,
 } from "@/lib/mock/data";
-import { createClient } from "@/lib/supabase/server";
+import { createPublicClient } from "@/lib/supabase/server";
 import type {
   FooterLink,
   HomepageCollection,
@@ -17,7 +17,7 @@ import type {
 } from "@/lib/supabase/types";
 
 async function selectAll<T>(table: string, orderBy?: string) {
-  const supabase = await createClient();
+  const supabase = createPublicClient();
 
   if (!supabase) {
     return null;
@@ -73,7 +73,7 @@ export async function getFooterLinks() {
 }
 
 export async function getSiteConfig() {
-  const supabase = await createClient();
+  const supabase = createPublicClient();
 
   if (!supabase) {
     return mockSiteConfig;
