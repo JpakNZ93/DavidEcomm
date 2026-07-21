@@ -21,7 +21,7 @@ export function ProductCard({
   return (
     <Link
       href={`/products/${product.slug}`}
-      className="group block overflow-hidden rounded-md border border-saltwater bg-white transition-shadow hover:shadow-md"
+      className="group block overflow-hidden rounded-md border border-saltwater bg-white transition-all hover:border-warm-stone hover:shadow-md"
       onClick={() =>
         void track("product_click", {
           product_id: product.id,

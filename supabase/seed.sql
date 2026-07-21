@@ -61,7 +61,7 @@ on conflict (slug) do update set
 insert into homepage_heroes (id, headline, subheadline, cta_text, cta_href, image_url, sort_order, active)
 values
   ('10000000-0000-0000-0000-000000000001', 'Premium fixtures for the spaces that matter most.', 'Refined bathroom, kitchen and hardware collections with honest pricing.', 'Shop premium vanities', '/collections/premium', 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80', 0, true),
-  ('10000000-0000-0000-0000-000000000002', 'Architectural details with a navy-and-gold point of view.', 'Discover statement handles, brass tapware and timeless utility pieces.', 'Explore best sellers', '/collections/best-sellers', 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1800&q=80', 1, true)
+  ('10000000-0000-0000-0000-000000000002', 'Architectural details, built on quality and trust.', 'Discover statement handles, brass tapware and timeless utility pieces.', 'Explore best sellers', '/collections/best-sellers', 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1800&q=80', 1, true)
 on conflict (id) do update set
   headline = excluded.headline,
   subheadline = excluded.subheadline,

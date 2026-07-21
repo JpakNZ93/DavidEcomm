@@ -23,7 +23,7 @@ export function SectionHeading({
       {href ? (
         <Link
           href={href}
-          className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-tangaroa hover:text-inkjet"
+          className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-tangaroa hover:text-warm-stone-600"
         >
           {ctaLabel}
           <ArrowRight className="size-4" />

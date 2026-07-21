@@ -13,6 +13,8 @@
   --color-tangaroa: #1e2b3b;
   --color-inkjet: #41556d;
   --color-warm-stone: #c7b8a3;
+  --color-warm-stone-600: #ab9678;
+  --color-warm-stone-50: #f6f2ec;
   --color-slate-grey: #7a8794;
   --color-saltwater: #c0cfdd;
   --color-saltwater-50: #f3f6f9;
@@ -177,11 +179,20 @@
   }
 
   .gold-cta-on-dark {
-    @apply inline-flex items-center justify-center rounded-full bg-warm-stone px-5 py-3 text-sm font-bold tracking-wide text-tangaroa uppercase transition-colors hover:bg-warm-stone/90;
+    @apply inline-flex items-center justify-center rounded-full bg-warm-stone px-5 py-3 text-sm font-bold tracking-wide text-tangaroa uppercase transition-colors hover:bg-white;
   }
 
   .section-heading {
     @apply text-lg font-bold tracking-[0.16em] text-tangaroa uppercase md:text-xl;
+  }
+
+  .section-heading::after {
+    content: "";
+    display: block;
+    margin-top: 0.5rem;
+    height: 3px;
+    width: 2.5rem;
+    background-color: var(--color-warm-stone-600);
   }
 
   .brand-eyebrow {

@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import type { ProductBadge as ProductBadgeType } from "@/lib/supabase/types";
 
 const styles: Record<Exclude<ProductBadgeType, null>, string> = {
-  best_seller: "bg-inkjet text-white",
+  best_seller: "bg-warm-stone-600 text-white",
   new: "bg-tangaroa text-white",
   sale: "bg-sale-red text-white",
 };
