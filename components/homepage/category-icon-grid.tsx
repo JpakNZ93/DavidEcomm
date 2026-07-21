@@ -45,7 +45,7 @@ export async function CategoryIconGrid() {
           title="Shop by category"
           subtitle="Explore the most-searched categories across the DavidEcomm catalog."
         />
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-11">
           {items.map((item) => {
             const Icon = iconMap[item.slug as keyof typeof iconMap];
 
@@ -53,12 +53,12 @@ export async function CategoryIconGrid() {
               <Link
                 key={item.id}
                 href={`/categories/${item.slug}`}
-                className="group flex flex-col items-center gap-3 rounded-md border border-gray-200 bg-white p-6 text-center transition-colors hover:border-gold-500"
+                className="group flex flex-col items-center gap-2 rounded-md border border-gray-200 bg-white px-2 py-3 text-center transition-colors hover:border-gold-500"
               >
-                <div className="flex size-16 items-center justify-center rounded-md border border-gray-200 text-navy-900 transition-colors group-hover:border-gold-500 group-hover:text-gold-500">
-                  <Icon className="size-8" />
+                <div className="flex size-11 items-center justify-center rounded-md border border-gray-200 text-navy-900 transition-colors group-hover:border-gold-500 group-hover:text-gold-500 sm:size-12">
+                  <Icon className="size-5 sm:size-6" />
                 </div>
-                <span className="text-sm font-medium text-gray-900">{item.name}</span>
+                <span className="text-xs leading-tight font-medium text-gray-900">{item.name}</span>
               </Link>
             );
           })}
