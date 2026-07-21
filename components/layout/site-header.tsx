@@ -8,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { brand } from "@/lib/brand";
 import { getCachedCategories } from "@/lib/categories";
 import { getNavigationTree } from "@/lib/navigation";
 
@@ -18,7 +19,7 @@ export async function SiteHeader() {
   ]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-saltwater bg-white/95 backdrop-blur">
       <TopBar />
       <div className="site-shell flex items-center gap-3 py-4">
         <Sheet>
@@ -34,8 +35,8 @@ export async function SiteHeader() {
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="w-full max-w-sm overflow-y-auto p-0">
-            <SheetHeader className="border-b border-gray-200">
-              <SheetTitle>Browse DavidEcomm</SheetTitle>
+            <SheetHeader className="border-b border-saltwater">
+              <SheetTitle>Browse {brand.name}</SheetTitle>
               <form action="/search" className="pt-4">
                 <label htmlFor="mobile-sheet-search" className="sr-only">
                   Search for products
@@ -44,7 +45,7 @@ export async function SiteHeader() {
                   id="mobile-sheet-search"
                   name="q"
                   placeholder="Search for products..."
-                  className="h-11 rounded-full border-gray-300 px-4"
+                  className="h-11 rounded-full border-saltwater px-4"
                 />
               </form>
             </SheetHeader>
@@ -58,7 +59,7 @@ export async function SiteHeader() {
                     <AccordionContent className="space-y-3 pb-4">
                       <Link
                         href={`/categories/${pillar.category.slug}`}
-                        className="block text-sm font-semibold text-gray-900"
+                        className="block text-sm font-semibold text-tangaroa"
                       >
                         All {pillar.label}
                       </Link>
@@ -67,7 +68,7 @@ export async function SiteHeader() {
                           <Link
                             key={child.id}
                             href={`/categories/${child.slug}`}
-                            className="block text-sm text-gray-600"
+                            className="block text-sm text-slate-grey"
                           >
                             {child.name}
                           </Link>
@@ -83,9 +84,9 @@ export async function SiteHeader() {
 
         <Link href="/" className="shrink-0">
           <div className="flex flex-col">
-            <span className="font-heading text-3xl text-navy-900">DavidEcomm</span>
-            <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-gold-500">
-              Premium Fixtures
+            <span className="font-heading text-3xl text-tangaroa">{brand.name}</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-inkjet">
+              {brand.tagline}
             </span>
           </div>
         </Link>
@@ -104,14 +105,14 @@ export async function SiteHeader() {
           <Button asChild variant="ghost" size="icon" aria-label="Cart">
             <Link href="/cart" className="relative">
               <ShoppingCart className="size-5" />
-              <span className="absolute -top-1 -right-1 inline-flex size-4 items-center justify-center rounded-full bg-gold-500 text-[10px] text-white">
+              <span className="absolute -top-1 -right-1 inline-flex size-4 items-center justify-center rounded-full bg-inkjet text-[10px] text-white">
                 0
               </span>
             </Link>
           </Button>
         </div>
       </div>
-      <div className="hidden bg-navy-900 lg:block">
+      <div className="hidden bg-tangaroa lg:block">
         <div className="site-shell">
           <MegaMenu pillars={pillars} categories={categories} />
         </div>

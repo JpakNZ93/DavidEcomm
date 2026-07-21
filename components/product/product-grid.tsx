@@ -10,7 +10,7 @@ export function ProductGrid({
 }) {
   if (products.length === 0) {
     return (
-      <div className="rounded-md border border-dashed border-gray-300 bg-gray-50 p-10 text-center text-sm text-gray-600">
+      <div className="rounded-md border border-dashed border-saltwater bg-saltwater-50 p-10 text-center text-sm text-slate-grey">
         No products found.
       </div>
     );

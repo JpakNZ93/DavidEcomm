@@ -10,8 +10,8 @@ export function StarRating({
   const filledStars = Math.round(rating);
 
   return (
-    <div className="flex items-center gap-2 text-xs text-gray-500">
-      <div className="flex items-center gap-0.5 text-gold-500" aria-hidden="true">
+    <div className="flex items-center gap-2 text-xs text-slate-grey">
+      <div className="flex items-center gap-0.5 text-warm-stone" aria-hidden="true">
         {Array.from({ length: 5 }).map((_, index) => (
           <Star
             key={index}

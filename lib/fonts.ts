@@ -1,13 +1,9 @@
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
-export const fontSans = DM_Sans({
+export const fontSans = Montserrat({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
-});
-
-export const fontDisplay = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
 });

@@ -12,7 +12,7 @@ export function ProductGallery({ images }: { images: ProductImage[] }) {
 
   if (!activeImage) {
     return (
-      <div className="rounded-md border border-dashed border-gray-300 bg-gray-50 p-8 text-sm text-gray-500">
+      <div className="rounded-md border border-dashed border-saltwater bg-saltwater-50 p-8 text-sm text-slate-grey">
         Product imagery coming soon.
       </div>
     );
@@ -38,7 +38,7 @@ export function ProductGallery({ images }: { images: ProductImage[] }) {
               className={cn(
                 "relative aspect-square overflow-hidden rounded-md border bg-gray-100",
                 index === selectedImage
-                  ? "border-gold-500 ring-2 ring-gold-500/30"
+                  ? "border-inkjet ring-2 ring-inkjet/30"
                   : "border-gray-200",
               )}
               onClick={() => setSelectedImage(index)}

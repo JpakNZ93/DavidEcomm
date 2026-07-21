@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Camera, Globe, Mail, MapPin, Phone } from "lucide-react";
 
+import { brand } from "@/lib/brand";
 import { getFooterLinks, getSiteConfig } from "@/lib/homepage";
 
 export async function SiteFooter() {
@@ -8,21 +9,21 @@ export async function SiteFooter() {
   const grouped = Object.groupBy(links, (link) => link.column_name);
 
   return (
-    <footer className="mt-auto bg-navy-900 text-white">
+    <footer className="mt-auto bg-tangaroa text-white">
       <div className="site-shell py-12">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
           <div className="space-y-4">
             <div>
-              <p className="font-heading text-3xl">DavidEcomm</p>
+              <p className="font-heading text-3xl">{brand.name}</p>
               <p className="mt-3 max-w-xs text-sm text-white/70">
-                Premium fixtures and architectural hardware for bathrooms, kitchens, laundries and beautifully finished spaces.
+                Building and renovation supplies for bathrooms, kitchens, hardware and beautifully finished spaces.
               </p>
             </div>
             <div className="flex items-center gap-3">
               {siteConfig.social_links.facebook ? (
                 <a
                   href={siteConfig.social_links.facebook}
-                  className="rounded-full border border-white/20 p-2 text-white/80 hover:text-gold-500"
+                  className="rounded-full border border-white/20 p-2 text-white/80 hover:text-warm-stone"
                 >
                   <Globe className="size-4" />
                   <span className="sr-only">Facebook</span>
@@ -31,7 +32,7 @@ export async function SiteFooter() {
               {siteConfig.social_links.instagram ? (
                 <a
                   href={siteConfig.social_links.instagram}
-                  className="rounded-full border border-white/20 p-2 text-white/80 hover:text-gold-500"
+                  className="rounded-full border border-white/20 p-2 text-white/80 hover:text-warm-stone"
                 >
                   <Camera className="size-4" />
                   <span className="sr-only">Instagram</span>
@@ -42,7 +43,7 @@ export async function SiteFooter() {
 
           {["Shop", "Customer Care", "Explore"].map((column) => (
             <div key={column} className="space-y-4">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-500">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-warm-stone">
                 {column}
               </h2>
               <ul className="space-y-3 text-sm text-white/75">
@@ -58,7 +59,7 @@ export async function SiteFooter() {
           ))}
 
           <div className="space-y-4">
-            <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-500">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-warm-stone">
               Contact
             </h2>
             <div className="space-y-3 text-sm text-white/75">
@@ -87,7 +88,7 @@ export async function SiteFooter() {
 
         <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/60 md:flex-row md:items-center md:justify-end">
           <div className="flex flex-wrap items-center gap-4">
-            <span>{new Date().getFullYear()} DavidEcomm</span>
+            <span>{new Date().getFullYear()} {brand.name}</span>
             <Link href="#" className="hover:text-white">
               Privacy
             </Link>

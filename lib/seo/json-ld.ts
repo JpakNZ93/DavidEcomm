@@ -1,3 +1,4 @@
+import { brand } from "@/lib/brand";
 import type { Category, Product } from "@/lib/supabase/types";
 
 export function productJsonLd(product: Product, siteUrl: string) {
@@ -50,7 +51,7 @@ export function websiteJsonLd(siteUrl: string) {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "DavidEcomm",
+    name: brand.name,
     url: siteUrl,
     potentialAction: {
       "@type": "SearchAction",
@@ -64,7 +65,7 @@ export function organizationJsonLd(siteUrl: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "DavidEcomm",
+    name: brand.name,
     url: siteUrl,
     logo: `${siteUrl}/favicon.ico`,
   };

@@ -56,19 +56,17 @@ export default async function CategoryPage({
           ]}
         />
 
-        <section className="grid gap-8 rounded-md bg-gray-50 p-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <section className="grid gap-8 rounded-md bg-saltwater-50 p-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-500">
-              Category
-            </p>
-            <h1 className="font-heading text-4xl text-gray-900 md:text-5xl">
+            <p className="brand-eyebrow-dark">Category</p>
+            <h1 className="font-heading text-4xl text-tangaroa md:text-5xl">
               {category.name}
             </h1>
-            <p className="max-w-2xl text-base text-gray-600">
+            <p className="max-w-2xl text-base text-slate-grey">
               {category.meta_description ||
-                `Explore curated ${category.name.toLowerCase()} from DavidEcomm.`}
+                `Explore curated ${category.name.toLowerCase()} from BDK Supply.`}
             </p>
-            <p className="text-sm font-medium text-gray-500">
+            <p className="text-sm font-medium text-slate-grey">
               {products.length} product{products.length === 1 ? "" : "s"}
             </p>
           </div>
@@ -93,7 +91,7 @@ export default async function CategoryPage({
                 <a
                   key={child.id}
                   href={`/categories/${child.slug}`}
-                  className="rounded-full border border-gray-300 px-4 py-2 text-sm text-gray-700 hover:border-gold-500 hover:text-gold-500"
+                  className="rounded-full border border-saltwater px-4 py-2 text-sm text-slate-grey hover:border-inkjet hover:text-inkjet"
                 >
                   {child.name}
                 </a>

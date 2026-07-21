@@ -12,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { brand } from "@/lib/brand";
 import type { HomepageHero } from "@/lib/supabase/types";
 
 export function HeroCarousel({ slides }: { slides: HomepageHero[] }) {
@@ -26,7 +27,7 @@ export function HeroCarousel({ slides }: { slides: HomepageHero[] }) {
   );
 
   return (
-    <section className="relative bg-navy-900 text-white">
+    <section className="relative bg-tangaroa text-white">
       <Carousel
         plugins={plugins}
         opts={{ loop: true }}
@@ -44,12 +45,10 @@ export function HeroCarousel({ slides }: { slides: HomepageHero[] }) {
                   sizes="100vw"
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-black/35" />
+                <div className="absolute inset-0 bg-tangaroa/55" />
                 <div className="site-shell relative flex min-h-[560px] items-end py-14 md:items-center">
                   <div className="max-w-2xl space-y-6">
-                    <p className="text-sm font-semibold uppercase tracking-[0.24em] text-gold-500">
-                      DavidEcomm
-                    </p>
+                    <p className="brand-eyebrow">{brand.name}</p>
                     <h1 className="font-heading text-4xl leading-tight md:text-6xl">
                       {slide.headline}
                     </h1>
@@ -59,7 +58,7 @@ export function HeroCarousel({ slides }: { slides: HomepageHero[] }) {
                       </p>
                     ) : null}
                     {slide.cta_href && slide.cta_text ? (
-                      <Link href={slide.cta_href} className="gold-cta">
+                      <Link href={slide.cta_href} className="gold-cta-on-dark">
                         {slide.cta_text}
                       </Link>
                     ) : null}

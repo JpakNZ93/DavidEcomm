@@ -7,6 +7,7 @@ import { PromoBanner } from "@/components/homepage/promo-banner";
 import { ShopWithConfidence } from "@/components/homepage/shop-with-confidence";
 import { TrustBar } from "@/components/homepage/trust-bar";
 import { ProductCarousel } from "@/components/product/product-carousel";
+import { brand } from "@/lib/brand";
 import { getHeroes, getCollections, getInspirationImages, getPromos } from "@/lib/homepage";
 import { getProducts } from "@/lib/products";
 
@@ -30,7 +31,7 @@ export default async function HomePage() {
       <ProductCarousel
         products={featured}
         title="Featured products"
-        subtitle="Premium vanities, tapware and fixtures chosen to define the DavidEcomm point of view."
+        subtitle={`Quality building and renovation supplies curated for the ${brand.name} point of view.`}
         viewAllHref="/collections/premium"
         ctaLabel="View collection"
         source="homepage-featured"

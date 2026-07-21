@@ -14,12 +14,12 @@ const paymentMethods = [
 
 export function ShopWithConfidence() {
   return (
-    <section className="border-t border-gray-200 bg-white py-10">
+    <section className="border-t border-saltwater bg-white py-10">
       <div className="site-shell">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-2">
             <h2 className="section-heading">Shop with confidence</h2>
-            <p className="max-w-xl text-sm text-gray-600">
+            <p className="max-w-xl text-sm text-slate-grey">
               Secure checkout powered by integrated payment services.
             </p>
           </div>

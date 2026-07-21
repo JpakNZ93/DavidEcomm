@@ -9,11 +9,17 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --font-heading: var(--font-display);
-  --color-navy-800: #1a2b42;
-  --color-navy-900: #0b172a;
-  --color-gold-500: #c19a6b;
-  --color-gold-600: #a8835a;
+  --font-heading: var(--font-sans);
+  --color-tangaroa: #1e2b3b;
+  --color-inkjet: #41556d;
+  --color-warm-stone: #c7b8a3;
+  --color-slate-grey: #7a8794;
+  --color-saltwater: #c0cfdd;
+  --color-saltwater-50: #f3f6f9;
+  --color-navy-800: #41556d;
+  --color-navy-900: #1e2b3b;
+  --color-gold-500: #c7b8a3;
+  --color-gold-600: #b0a08c;
   --color-sale-red: #a50000;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -55,23 +61,23 @@
 
 :root {
   --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --foreground: #1e2b3b;
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: #1e2b3b;
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --popover-foreground: #1e2b3b;
+  --primary: #41556d;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --secondary: #f3f6f9;
+  --secondary-foreground: #1e2b3b;
+  --muted: #f3f6f9;
+  --muted-foreground: #7a8794;
+  --accent: #f3f6f9;
+  --accent-foreground: #1e2b3b;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: #dce4ec;
+  --input: #dce4ec;
+  --ring: #41556d;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -132,6 +138,18 @@
   body {
     @apply min-h-screen bg-background text-foreground;
   }
+  h1,
+  .text-h1 {
+    @apply font-sans text-[28px] leading-tight font-black md:text-[32px];
+  }
+  h2,
+  .text-h2 {
+    @apply font-sans text-2xl leading-tight font-bold;
+  }
+  h3,
+  .text-h3 {
+    @apply font-sans text-[21px] leading-snug font-medium;
+  }
   a {
     @apply transition-colors;
   }
@@ -149,11 +167,28 @@
     @apply py-12 lg:py-16;
   }
 
+  .font-heading {
+    font-family: var(--font-sans);
+    font-weight: 800;
+  }
+
   .gold-cta {
-    @apply inline-flex items-center justify-center rounded-sm bg-gold-500 px-5 py-3 text-sm font-semibold tracking-wide text-white uppercase transition-colors hover:bg-gold-600;
+    @apply inline-flex items-center justify-center rounded-full bg-inkjet px-5 py-3 text-sm font-bold tracking-wide text-white uppercase transition-colors hover:bg-tangaroa;
+  }
+
+  .gold-cta-on-dark {
+    @apply inline-flex items-center justify-center rounded-full bg-warm-stone px-5 py-3 text-sm font-bold tracking-wide text-tangaroa uppercase transition-colors hover:bg-warm-stone/90;
   }
 
   .section-heading {
-    @apply text-lg font-semibold tracking-[0.22em] text-gray-900 uppercase md:text-xl;
+    @apply text-lg font-bold tracking-[0.16em] text-tangaroa uppercase md:text-xl;
+  }
+
+  .brand-eyebrow {
+    @apply text-sm font-semibold tracking-[0.2em] text-warm-stone uppercase;
+  }
+
+  .brand-eyebrow-dark {
+    @apply text-sm font-semibold tracking-[0.2em] text-inkjet uppercase;
   }
 }
