@@ -4,6 +4,7 @@ import { HeroCarousel } from "@/components/homepage/hero-carousel";
 import { InspirationGrid } from "@/components/homepage/inspiration-grid";
 import { NewsletterSignup } from "@/components/homepage/newsletter-signup";
 import { PromoBanner } from "@/components/homepage/promo-banner";
+import { ShopWithConfidence } from "@/components/homepage/shop-with-confidence";
 import { TrustBar } from "@/components/homepage/trust-bar";
 import { ProductCarousel } from "@/components/product/product-carousel";
 import { getHeroes, getCollections, getInspirationImages, getPromos } from "@/lib/homepage";
@@ -54,8 +55,9 @@ export default async function HomePage() {
         source="homepage-new-arrivals"
       />
       <InspirationGrid images={inspirationImages.slice(0, 4)} title="Bathroom inspiration" />
-      <NewsletterSignup />
       <TrustBar />
+      <NewsletterSignup />
+      <ShopWithConfidence />
     </>
   );
 }
