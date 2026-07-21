@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { brand } from "@/lib/brand";
 
 export function NewsletterSignup() {
   const [email, setEmail] = useState("");
@@ -31,7 +32,7 @@ export function NewsletterSignup() {
       }
 
       setStatus("success");
-      setMessage("Thanks for subscribing. We'll be in touch with new arrivals and offers.");
+      setMessage("Thanks for subscribing. We'll be in touch with new arrivals and project inspiration.");
       setEmail("");
     } catch (error) {
       setStatus("error");
@@ -40,15 +41,13 @@ export function NewsletterSignup() {
   }
 
   return (
-    <section className="bg-navy-900 py-14 text-white">
+    <section className="bg-inkjet py-14 text-white">
       <div className="site-shell grid gap-8 lg:grid-cols-[1fr_420px] lg:items-center">
         <div className="space-y-3">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-500">
-            Newsletter
-          </p>
+          <p className="brand-eyebrow">Newsletter</p>
           <h2 className="font-heading text-4xl">Be the first to know</h2>
-          <p className="max-w-xl text-white/75">
-            Get the latest products, renovation inspiration and exclusive DavidEcomm offers.
+          <p className="max-w-xl text-white/80">
+            Get the latest products, renovation inspiration and exclusive {brand.name} offers.
           </p>
         </div>
         <form className="space-y-3" onSubmit={handleSubmit}>
@@ -68,7 +67,7 @@ export function NewsletterSignup() {
             <Button
               type="submit"
               disabled={status === "loading"}
-              className="gold-cta h-12 rounded-full px-6 whitespace-nowrap"
+              className="gold-cta-on-dark h-12 rounded-full px-6 whitespace-nowrap"
             >
               {status === "loading" ? "Submitting..." : "Subscribe"}
             </Button>

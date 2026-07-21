@@ -21,7 +21,7 @@ export function ProductCard({
   return (
     <Link
       href={`/products/${product.slug}`}
-      className="group block overflow-hidden rounded-md border border-gray-200 bg-white transition-shadow hover:shadow-md"
+      className="group block overflow-hidden rounded-md border border-saltwater bg-white transition-shadow hover:shadow-md"
       onClick={() =>
         void track("product_click", {
           product_id: product.id,
@@ -29,7 +29,7 @@ export function ProductCard({
         })
       }
     >
-      <div className="relative aspect-square overflow-hidden bg-gray-100">
+      <div className="relative aspect-square overflow-hidden bg-saltwater-50">
         {product.badge ? (
           <ProductBadge badge={product.badge} className="absolute top-3 left-3 z-10" />
         ) : null}
@@ -44,7 +44,7 @@ export function ProductCard({
         ) : null}
       </div>
       <div className="space-y-3 p-4">
-        <h3 className="line-clamp-2 text-sm font-medium uppercase tracking-[0.12em] text-gray-900">
+        <h3 className="line-clamp-2 text-sm font-medium uppercase tracking-[0.12em] text-tangaroa">
           {product.name}
         </h3>
         <PriceDisplay cents={product.price} />

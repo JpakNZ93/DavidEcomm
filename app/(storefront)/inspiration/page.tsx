@@ -9,14 +9,14 @@ export default async function InspirationPage() {
     <div className="section-space">
       <div className="site-shell space-y-8">
         <Breadcrumbs items={[{ label: "Inspiration" }]} />
-        <section className="rounded-md bg-gray-50 p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-500">
+        <section className="rounded-md bg-saltwater-50 p-8">
+          <p className="brand-eyebrow-dark">
             Gallery
           </p>
-          <h1 className="mt-3 font-heading text-4xl text-gray-900 md:text-5xl">
+          <h1 className="mt-3 font-heading text-4xl text-tangaroa md:text-5xl">
             Inspiration
           </h1>
-          <p className="mt-4 max-w-2xl text-base text-gray-600">
+          <p className="mt-4 max-w-2xl text-base text-slate-grey">
             Explore styled spaces, premium finishes and product pairings across bathrooms, kitchens and laundries.
           </p>
         </section>

@@ -17,13 +17,13 @@ export function SectionHeading({
       <div className="space-y-2">
         <h2 className="section-heading">{title}</h2>
         {subtitle ? (
-          <p className="max-w-2xl text-sm text-gray-600">{subtitle}</p>
+          <p className="max-w-2xl text-sm text-slate-grey">{subtitle}</p>
         ) : null}
       </div>
       {href ? (
         <Link
           href={href}
-          className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-gray-900 hover:text-gold-500"
+          className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-tangaroa hover:text-inkjet"
         >
           {ctaLabel}
           <ArrowRight className="size-4" />

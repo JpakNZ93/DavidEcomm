@@ -86,39 +86,37 @@ export default async function ProductPage({
           <ProductGallery images={product.product_images ?? []} />
           <div className="space-y-6">
             <div className="space-y-3">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-500">
-                {product.brand}
-              </p>
-              <h1 className="font-heading text-4xl text-gray-900 md:text-5xl">
+              <p className="brand-eyebrow-dark">{product.brand}</p>
+              <h1 className="font-heading text-4xl text-tangaroa md:text-5xl">
                 {product.name}
               </h1>
               <StarRating rating={product.rating} count={product.review_count} />
             </div>
             <PriceDisplay cents={product.price} className="text-3xl" />
-            <div className="space-y-3 border-y border-gray-200 py-5 text-sm text-gray-600">
+            <div className="space-y-3 border-y border-saltwater py-5 text-sm text-slate-grey">
               <p>SKU: {product.sku}</p>
               {Object.entries(product.attributes).map(([key, value]) => (
                 <p key={key}>
-                  <span className="font-semibold uppercase tracking-[0.12em] text-gray-900">
+                  <span className="font-semibold uppercase tracking-[0.12em] text-tangaroa">
                     {key}:
                   </span>{" "}
                   {value}
                 </p>
               ))}
             </div>
-            <p className="leading-7 text-gray-600">{product.description}</p>
+            <p className="leading-7 text-slate-grey">{product.description}</p>
             <Button
               type="button"
               disabled
-              className="gold-cta h-12 w-full rounded-sm disabled:cursor-not-allowed disabled:opacity-70"
+              className="gold-cta h-12 w-full rounded-full disabled:cursor-not-allowed disabled:opacity-70"
             >
               Add to cart coming soon
             </Button>
-            <div className="rounded-md border border-gray-200 bg-gray-50 p-5">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-900">
+            <div className="rounded-md border border-saltwater bg-saltwater-50 p-5">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-tangaroa">
                 Reviews
               </h2>
-              <p className="mt-3 text-sm text-gray-600">
+              <p className="mt-3 text-sm text-slate-grey">
                 Reviews are coming soon. In Phase 1 we are focusing on catalog discovery, SEO and navigation.
               </p>
             </div>

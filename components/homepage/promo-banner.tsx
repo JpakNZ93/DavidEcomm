@@ -12,7 +12,7 @@ export function PromoBanner({ promo }: { promo: HomepagePromo | null }) {
   return (
     <section className="section-space">
       <div className="site-shell">
-        <div className="grid overflow-hidden rounded-md bg-sale-red text-white lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="grid overflow-hidden rounded-md bg-inkjet text-white lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-6 p-8 md:p-12">
             {promo.eyebrow ? (
               <span className="inline-flex rounded-full border border-white/25 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em]">
@@ -28,7 +28,7 @@ export function PromoBanner({ promo }: { promo: HomepagePromo | null }) {
             {promo.cta_href && promo.cta_text ? (
               <Link
                 href={promo.cta_href}
-                className="inline-flex items-center gap-2 rounded-sm bg-white px-5 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-sale-red"
+                className="inline-flex items-center gap-2 rounded-full bg-warm-stone px-5 py-3 text-sm font-bold uppercase tracking-[0.16em] text-tangaroa"
               >
                 {promo.cta_text}
                 <ArrowRight className="size-4" />

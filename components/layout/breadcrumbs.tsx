@@ -8,10 +8,10 @@ export interface BreadcrumbItem {
 
 export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   return (
-    <nav aria-label="Breadcrumb" className="text-sm text-gray-500">
+    <nav aria-label="Breadcrumb" className="text-sm text-slate-grey">
       <ol className="flex flex-wrap items-center gap-2">
         <li>
-          <Link href="/" className="hover:text-gold-500">
+          <Link href="/" className="hover:text-inkjet">
             Home
           </Link>
         </li>
@@ -19,11 +19,11 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
           <li key={`${item.label}-${item.href ?? "current"}`} className="flex items-center gap-2">
             <ChevronRight className="size-4" aria-hidden="true" />
             {item.href ? (
-              <Link href={item.href} className="hover:text-gold-500">
+              <Link href={item.href} className="hover:text-inkjet">
                 {item.label}
               </Link>
             ) : (
-              <span className="text-gray-900">{item.label}</span>
+              <span className="text-tangaroa">{item.label}</span>
             )}
           </li>
         ))}

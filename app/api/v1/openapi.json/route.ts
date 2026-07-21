@@ -6,10 +6,10 @@ export async function GET() {
   return NextResponse.json({
     openapi: "3.1.0",
     info: {
-      title: "DavidEcomm Catalog API",
+      title: "BDK Supply Catalog API",
       version: "1.0.0",
       description:
-        "Public read API for the DavidEcomm Phase 1 catalog, categories and search endpoints.",
+        "Public read API for the BDK Supply Phase 1 catalog, categories and search endpoints.",
     },
     servers: [{ url: getSiteUrl() }],
     paths: {

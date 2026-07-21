@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
+import { brand } from "@/lib/brand";
 import type { Category, Product } from "@/lib/supabase/types";
 
-export const siteName = "DavidEcomm";
-export const siteDescription =
-  "Premium fixtures e-commerce for bathroom, doors & hardware, and kitchen & laundry.";
+export const siteName = brand.name;
+export const siteDescription = brand.description;
 
 export function getSiteUrl() {
   return process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
@@ -18,7 +18,7 @@ export function buildDefaultMetadata(): Metadata {
   return {
     metadataBase: new URL(getSiteUrl()),
     title: {
-      default: `${siteName} | Premium Fixtures`,
+      default: `${siteName} | ${brand.tagline}`,
       template: `%s | ${siteName}`,
     },
     description: siteDescription,
@@ -30,13 +30,13 @@ export function buildDefaultMetadata(): Metadata {
       type: "website",
       locale: "en_AU",
       url: absoluteUrl("/"),
-      title: `${siteName} | Premium Fixtures`,
+      title: `${siteName} | ${brand.tagline}`,
       description: siteDescription,
       siteName,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${siteName} | Premium Fixtures`,
+      title: `${siteName} | ${brand.tagline}`,
       description: siteDescription,
     },
   };

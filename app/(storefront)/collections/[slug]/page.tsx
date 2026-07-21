@@ -30,7 +30,7 @@ export async function generateMetadata({
   return buildPageMetadata({
     title: `${titleFromSlug(slug)} Collection`,
     description:
-      mockCollectionDescriptions[slug] || "Curated DavidEcomm collection.",
+      mockCollectionDescriptions[slug] || "Curated BDK Supply collection.",
     path: `/collections/${slug}`,
   });
 }
@@ -55,14 +55,12 @@ export default async function CollectionPage({
     <div className="section-space">
       <div className="site-shell space-y-8">
         <Breadcrumbs items={[{ label: "Collections", href: "/" }, { label: titleFromSlug(slug) }]} />
-        <section className="rounded-md bg-gray-50 p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-500">
-            Collection
-          </p>
-          <h1 className="mt-3 font-heading text-4xl text-gray-900 md:text-5xl">
+        <section className="rounded-md bg-saltwater-50 p-8">
+          <p className="brand-eyebrow-dark">Collection</p>
+          <h1 className="mt-3 font-heading text-4xl text-tangaroa md:text-5xl">
             {titleFromSlug(slug)}
           </h1>
-          <p className="mt-4 max-w-3xl text-base text-gray-600">
+          <p className="mt-4 max-w-3xl text-base text-slate-grey">
             {mockCollectionDescriptions[slug]}
           </p>
         </section>

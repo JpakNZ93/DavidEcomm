@@ -14,5 +14,5 @@ export function PriceDisplay({
   cents: number;
   className?: string;
 }) {
-  return <span className={cn("font-bold text-gray-900", className)}>{formatAudPrice(cents)}</span>;
+  return <span className={cn("font-bold text-tangaroa", className)}>{formatAudPrice(cents)}</span>;
 }

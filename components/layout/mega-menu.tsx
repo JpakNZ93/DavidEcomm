@@ -56,16 +56,16 @@ export function MegaMenu({
 
           return (
             <NavigationMenuItem key={pillar.slug}>
-              <NavigationMenuTrigger className="rounded-none bg-transparent px-0 text-sm font-semibold uppercase tracking-[0.18em] text-white hover:bg-transparent hover:text-gold-500 focus:bg-transparent focus:text-gold-500 data-open:bg-transparent data-open:text-gold-500">
+              <NavigationMenuTrigger className="rounded-none bg-transparent px-0 text-sm font-semibold uppercase tracking-[0.18em] text-white hover:bg-transparent hover:text-warm-stone focus:bg-transparent focus:text-warm-stone data-open:bg-transparent data-open:text-warm-stone">
                 {pillar.label}
               </NavigationMenuTrigger>
-              <NavigationMenuContent className="left-0 mt-0 w-[min(100vw-2rem,1120px)] rounded-none border border-gray-200 bg-white p-0 shadow-2xl">
+              <NavigationMenuContent className="left-0 mt-0 w-[min(100vw-2rem,1120px)] rounded-none border border-saltwater bg-white p-0 shadow-2xl">
                 <div className="grid min-h-[420px] grid-cols-[280px_1fr]">
-                  <div className="border-r border-gray-200 bg-gray-50 p-6">
+                  <div className="border-r border-saltwater bg-saltwater-50 p-6">
                     <div className="mb-6">
                       <Link
                         href={`/categories/${pillar.category.slug}`}
-                        className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 hover:text-gold-500"
+                        className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-grey hover:text-inkjet"
                       >
                         All {pillar.label}
                       </Link>
@@ -85,9 +85,9 @@ export function MegaMenu({
                               }))
                             }
                             className={cn(
-                              "block rounded-sm px-3 py-2 text-sm text-gray-700 hover:bg-white hover:text-gray-900",
+                              "block rounded-sm px-3 py-2 text-sm text-slate-grey hover:bg-white hover:text-tangaroa",
                               isActive &&
-                                "bg-white font-semibold text-gray-900 underline underline-offset-4",
+                                "bg-white font-semibold text-tangaroa underline underline-offset-4",
                             )}
                           >
                             {child.name}
@@ -99,17 +99,17 @@ export function MegaMenu({
                   <div className="p-6">
                     <div className="mb-6 flex items-end justify-between gap-4">
                       <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500">
+                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-grey">
                           Shop {pillar.label}
                         </p>
-                        <h3 className="mt-2 font-heading text-3xl text-gray-900">
+                        <h3 className="mt-2 font-heading text-3xl text-tangaroa">
                           {selectedChild?.name ?? pillar.label}
                         </h3>
                       </div>
                       {selectedChild ? (
                         <Link
                           href={`/categories/${selectedChild.slug}`}
-                          className="text-sm font-semibold uppercase tracking-[0.14em] text-gray-900 hover:text-gold-500"
+                          className="text-sm font-semibold uppercase tracking-[0.14em] text-tangaroa hover:text-inkjet"
                         >
                           View category
                         </Link>
@@ -122,7 +122,7 @@ export function MegaMenu({
                           href={`/categories/${card.slug}`}
                           className="group text-center"
                         >
-                          <div className="relative mx-auto aspect-square w-28 overflow-hidden rounded-full bg-gray-100">
+                          <div className="relative mx-auto aspect-square w-28 overflow-hidden rounded-full bg-saltwater-50">
                             {card.mega_menu_image ? (
                               <Image
                                 src={card.mega_menu_image}
@@ -133,7 +133,7 @@ export function MegaMenu({
                               />
                             ) : null}
                           </div>
-                          <p className="mt-3 text-sm font-medium text-gray-900">
+                          <p className="mt-3 text-sm font-medium text-tangaroa">
                             {card.name}
                           </p>
                         </Link>
